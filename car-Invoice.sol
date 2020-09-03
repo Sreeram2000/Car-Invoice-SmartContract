@@ -28,7 +28,19 @@ contract carInvoice {
         invoiceNo = newinvoiceNo;
     }
     
+    
     function getInvoice() public view returns(string,int,string,string,string,string,string) {
         return (customerName,amtOfInvoice,carMakeAndModel,companyAndDealerName,date,addrsCustomer,invoiceNo) ;
+    }
+    
+    
+    function setInvoice(string newcustomerName,
+    int     newamtOfInvoice,
+    string  newdate,
+    string  newaddrsCustomer) public {
+        customerName = newcustomerName;
+        amtOfInvoice = newamtOfInvoice;
+        date = newdate;
+        addrsCustomer = newaddrsCustomer;
     }
 }
